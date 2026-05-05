@@ -40,8 +40,8 @@ print("\nMissing Values:\n")
 print(df.isnull().sum())
 
 # Fill missing values with mean
-df["Math"].fillna(df["Math"].mean(), inplace=True)
-df["Science"].fillna(df["Science"].mean(), inplace=True)
+df["Math"] = df["Math"].fillna(df["Math"].mean())
+df["Science"] = df["Science"].fillna(df["Science"].mean())
 
 # Fix inconsistency (Attendance > 100)
 df.loc[df["Attendance"] > 100, "Attendance"] = 100
