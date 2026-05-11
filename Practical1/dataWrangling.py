@@ -51,11 +51,9 @@ print(df.isnull().sum(), "\n")
 # ==========================================
 
 # Fill missing Age with mean
-#df['Age'].fillna(df['Age'].mean(), inplace=True)
 df['Age'] = df['Age'].fillna(df['Age'].mean())
 
 # Fill missing Embarked with mode
-#df['Embarked'].fillna(df['Embarked'].mode()[0], inplace=True)
 df['Embarked'] = df['Embarked'].fillna(df['Embarked'].mode()[0])
 
 # Drop Cabin column (too many missing values)
